@@ -1,0 +1,238 @@
+
+<!DOCTYPE html><html lang="zh-hants"><head><title>Django Tutorial v.s. Flask Tutorial in Taichung.py -- Keith Yang</title><meta charset="utf-8"/><meta name="viewport" content="width=792, user-scalable=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><link rel="stylesheet" href="buildpack//shower-ribbon/styles/screen.css"/><link rel="stylesheet" href="buildpack//font-awesome/css/font-awesome.min.css"/><link rel="stylesheet" href="pygments.css"/><script src="buildpack//jquery/dist/jquery.min.js">
+</script><style>.slide {
+  font-family: "Trebuchet MS", "Source Han Sans TWHK", "Noto Sans T Chinese", sans-serif;
+  background-color: #fff;
+  color: #86382c;
+  font-size: 32px;
+  i: font-style normal;
+}
+.slide .dj_green_text {
+  color: #487858;
+}
+.slide .fk_text {
+  color: #1f1f1f;
+}
+.slide .white {
+  color: #fff;
+}
+.slide .quote {
+  color: #666;
+}
+.slide pre {
+  margin: 0 20px;
+}
+.slide ul li,
+.slide ol li {
+  margin-left: 64px;
+}
+.slide ul li i.fa,
+.slide ol li i.fa {
+  text-indent: 0;
+}
+.slide a {
+  background: none;
+  color: #ab5603;
+}
+.slide a.hover {
+  background: linear-gradient(to top, currentcolor, $k_yellow 0.09em, transparent 0.09em, transparent) repeat-x scroll 0% 0% transparent;
+}
+.slide a.ref {
+  font-size: 16px;
+  border-bottom: 1px solid #fbdc59;
+}
+.slide.console {
+  background-color: #000;
+}
+.slide.cover {
+  background-color: #fff;
+}
+.slide.description ul li,
+.slide.description ol li {
+  font-size: 22px;
+}
+.slide.description ul.smaller li,
+.slide.description ol.smaller li {
+  font-size: 18px;
+}
+.slide:after {
+  padding: 38px 0px 0px;
+  color: #86382c;
+  width: 54px;
+  background: url("pictures/kribbon.svg") no-repeat scroll 0% 0% transparent;
+}
+.slide .text-left {
+  text-align: left;
+}
+.slide .text-center {
+  text-align: center;
+}
+.slide .text-right {
+  text-align: right;
+}
+.slide h2 {
+  color: #86382c;
+}
+.slide h2 a img {
+  text-decoration: none;
+}
+.slide h2.footnote {
+  font-size: 30px;
+}
+.slide hr {
+  color: #ffe761;
+  border: 4px solid #ffe761;
+}
+.slide pre {
+  font-family: monospace;
+  line-height: 40px;
+}
+.slide .terminal {
+  padding: 5px;
+  font-family: monospace;
+  border-radius: 5px;
+  background: none repeat scroll 0% 0% #272822;
+  color: #f8f8f2;
+}
+.slide pre.code {
+  padding: 5px;
+  border-radius: 3px;
+}
+.slide code,
+.slide .code {
+  font-family: "Ubuntu Mono", monospace;
+  color: #ffe761;
+  background: #000;
+}
+.slide code.dj_green_text,
+.slide .code.dj_green_text {
+  color: #5cb46c;
+}
+.slide code.smaller,
+.slide .code.smaller {
+  font-size: 26px;
+  line-height: 30px;
+}
+.slide code.even-smaller,
+.slide .code.even-smaller {
+  font-size: 22px;
+  line-height: 24px;
+}
+.slide .note {
+  color: #6763fb;
+}
+.slide.shout h2.small {
+  font-size: 100px;
+}
+.slide.shout h2.text-left {
+  text-align: left;
+}
+.slide.shout h3 {
+  font-size: 44px;
+}
+.slide.shout ul.green li {
+  color: #ffe761;
+}
+.slide.shout ul li {
+  float: left;
+}
+.slide.shout strong {
+  text-shadow: 4px 4px #000;
+}
+.full .progress div {
+  border-color: transparent transparent #ffe761;
+}
+.slide ol libefore,
+.slide ul li:before {
+  color: #ffe761;
+}
+.slide.dj {
+background-color
+  color: #487858;
+}
+.slide.dj h2,
+.slide.dj h3 {
+  color: #487858;
+}
+.slide.dj .note {
+  color: #fd6866;
+}
+.slide.dj a {
+  color: #ab5603;
+}
+.slide.fk {
+  color: #1f1f1f;
+}
+.slide.fk h2,
+.slide.fk h3 {
+  color: #1f1f1f;
+}
+.slide.fk .note {
+  color: #fd6866;
+}
+.slide.fk a {
+  color: #ab5603;
+}</style></head><body class="list"><p class="badge"><a href="http://www.meetup.com/Taichung-Python-Meetup/" target="_blank">台中.py</a></p><header class="caption"><h1>Django Tutorial v.s. Flask Tutorial</h1><p class="en_font">Keith Yang</p></header><section id="Cover" class="slide cover"><div><h2><span class="dj_green_text">Django</span> Tutorial<br/>v.s. <span class="fk_text">Flask</span> Tutorial</h2><hr/><h3 class="text-center"><author><a href="https://yang.keitheis.org" class="en_font">Keith Yang</a></author></h3><div class="taichungpy"><a href="http://www.meetup.com/Taichung-Python-Meetup/">Taichung.py</a><br/><span class="text">2014.7</span></div><style>.slide .taichungpy {
+  float: right;
+  margin-top: 2em;
+  margin-right: -2em;
+}
+.slide .taichungpy img {
+  position: relative;
+  width: 200px;
+}
+.slide .taichungpy .text {
+  float: right;
+  color: #2082fb;
+  font-family: monospace;
+  font-size: 0.8em;
+}
+#Cover h2 {
+  color: #c23236;
+  margin: 40px 0;
+  text-align: center;
+  line-height: 1.2em;
+  font-size: 70px;
+}
+#Cover .author {
+  text-align: center;
+  color: #c23236;
+  margin: 10px 0 0;
+}
+.slide .markpy {
+  color: #7fd7c9;
+}</style></div></section><section class="slide cover"><div><img src="pictures/mecollage.png" width="100%" alt="Photos of me"/></div></section><section class="slide"><div><h2><a href="https://yang.keitheis.org" class="ref"><code>yang.keitheis.org</code></a></h2><h3><img alt="biideal, Taipei.py, PyCon APAC" src="pictures/Working.jpg" width="80%" class="pull-right"/></h3><br/>@keitheis <strong><a title="keitheis on Twitter" href="https://twitter.com/keitheis"><i class="fa fa-twitter"></i></a> <a title="ketheis on Bitbucket" href="https://bitbucket.org/keitheis"><i class="fa fa-bitbucket"></i></a> <a title="keitheis on Github" href="https://github.com/keitheis"><i class="fa fa-github"></i></a></strong></div></section><section class="slide description"><div><h2>大綱</h2><ol><li>介紹 Python web frameworks</li><li>pip 安裝套件與 virtualenv 設定</li><li>Project 的結構</li><li>網址：Routing and Views: Django urls v.s. Flask app.url</li><li>網頁樣版：Django template v.s. Jinja2</li><li>表單與驗證：Django Form v.s. Flask-WTF (WTForms)</li><li>資料庫物件：Django ORM v.s. Flask-SQLAlchemy</li><li>使用者登入：Django User v.s. Flask-Login</li><li>第三方套件與在台灣的學習資源</li></ol></div></section><section class="slide dj shout"><div><h2 class="small">這個字色<br/>是屬於 Django 的</h2></div></section><section class="slide fk shout"><div><h2 class="small">這個字色<br/>是屬於 Flask 的</h2></div></section><section class="slide"><div><h2>介紹 Python web frameworks</h2><ul class="pull-right"><li>Falcon</li><li>web.py</li><li>CherryPy</li><li>circuits</li><li>wheezy.web</li><li>web.py</li></ul><ul class="pull-right"><li class="dj_green_text">Django</li><li class="fk_text">Flask</li><li>Pyramid</li><li>Tornado</li><li>Bottle</li><li>Web2py</li></ul><p>隨隨便便就一打</p><p>每個人都可以寫<br/>／用自己喜歡的框架</p></div></section><section class="slide"><div><h2>如何挑選</h2><ul><li>目的＆功能<br/><span class="note">難以達成目標，再強大也有限</span></li><li>程度＆支援資源（文件數、中文文件數、社群）<br/><span class="note">都可以自己刻，只要有心有力與那個時間</span></li><li>品味＆社群文化<br/><span class="note">理解架構之美與效能之威；設計理念形成社群</span></li></ul></div></section><section class="slide"><div><h2>如何挑選（續）</h2><ul><li>目的＆功能<br/><span class="note">都能達成目標，再微小也有限</span></li><li>程度＆支援資源（文件數、中文文件數、社群）<br/><span class="note">都可以找套件，只要能用、有人寫、有人維護</span></li><li>品味＆社群文化<br/><span class="note">忘記架構之限與效能之用；市場會改變社群</span></li></ul></div></section><section class="slide"><div><h2>pip 安裝套件與 virtualenv 設定</h2>安裝 pip<ul><li>Python 3.4 on Windows: pip included</li><li>Download <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a></li><li><code>python get-pip.py</code></li></ul></div></section><section class="slide"><div><h2>用 pip 安裝 virtualenv</h2><ul><li><code>pip install virtualenv</code></li><li><code>virtualenv taipy</code>建立 taipy 的 virtualenv 環境</li><li>在 Mac 或 Linux 上進入 virtualenv 環境<br/><code>. taipy/bin/activate</code></li><li>在 Windows 上進入 virtualenv 環境<br/><code>taipy\scripts\activate</code></li></ul></div></section><section class="slide description console"><div><h2><code>pip install</code></h2><code>Django Flask Flask-WTF Flask-SQLAlchemy</code><ul class="smaller"><li class="white">Django-1.6.5<span class="note">-py2.py3-none-any.whl</span> (6.7MB)</li><li class="white">Flask-0.10.1.tar.gz (544kB)</li><li class="white">Flask-WTF-0.10.0.tar.gz (246kB)</li><li class="white">Flask-SQLAlchemy-1.0.tar.gz (92kB)</li><li class="white">Werkzeug-0.9.6.tar.gz (1.1MB)</li><li class="white">Jinja2-2.7.3.tar.gz (378kB)</li><li class="white">itsdangerous-0.24.tar.gz (46kB)</li><li class="white">WTForms-2.0.1.zip (444kB)</li><li class="white">SQLAlchemy-0.9.7.tar.gz (4.1MB)</li><li class="white">MarkupSafe-0.23.tar.gz</li></ul></div></section><section class="slide shout"><div><h2>Project 的結構</h2></div></section><section class="slide console"><div>
+<pre class="code smaller"><div class="codehilite">Django 1.6.5<br/><span class="o">(</span>taipy<span class="o">)</span>% django-admin.py startproject mysite<br/><span class="o">(</span>taipy<span class="o">)</span>% tree mysite/<br/>&nbsp;&nbsp;&nbsp;&nbsp;mysite/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- manage.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- mysite/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- settings.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- urls.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- wsgi.py<br/>&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;1 directory, 5 files<br/></div></pre></div></section><section class="slide console"><div><pre class="code smaller">
+<div class="codehilite">Flask 0.10.1<br/><span class="o">(</span>taipy<span class="o">)</span>% mkdir myleaf<br/><span class="o">(</span>taipy<span class="o">)</span>% cat &gt; myleaf/leaf.py<br/></div><br/>
+<div class="codehilite"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><br/><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span><br/><br/><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span><br/><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="s">&quot;Hello Leaf!&quot;</span><br/><br/><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><br/></div></pre></div></section><section class="slide console"><div><h2>執行 Run server</h2><pre class="code smaller">
+<div class="codehilite">Flask<br/><span class="o">(</span>taipy<span class="o">)</span>% <span class="nb">cd </span>myleaf<br/><span class="o">(</span>taipy<span class="o">)</span>% python leaf.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Running on http://127.0.0.1:5000/<br/>&nbsp;<br/>Django<br/><span class="o">(</span>taipy<span class="o">)</span>% <span class="nb">cd</span> ../mysite<br/><span class="o">(</span>taipy<span class="o">)</span>% python manage.py runserver<br/>&nbsp;&nbsp;&nbsp;&nbsp;...<br/>&nbsp;&nbsp;&nbsp;&nbsp;Starting development server at http://127.0.0.1:8000/<br/>&nbsp;&nbsp;&nbsp;&nbsp;Quit the server with CONTROL-C.<br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">小型 Flask 應用架構</h2><pre class="code even-smaller">
+<div class="codehilite">- myleaf/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- templates/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- static/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- main/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- errors.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- forms.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- views.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- tests/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="nb">test</span>*.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- email.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- models.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- requirements.txt<br/>&nbsp;&nbsp;&nbsp;&nbsp;- config.py<br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">中大型 Flask 應用架構</h2><pre class="code even-smaller">
+<div class="codehilite">- myleaf/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- app/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- templates/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- static/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- main/...<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- email.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- models.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- migrations/...<br/>&nbsp;&nbsp;&nbsp;&nbsp;- tests/...<br/>&nbsp;&nbsp;&nbsp;&nbsp;- venv/...<br/>&nbsp;&nbsp;&nbsp;&nbsp;- manage.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- requirements.txt<br/>&nbsp;&nbsp;&nbsp;&nbsp;- config.py<br/></div></pre></div></section><section class="slide shout"><div><h2>模組化<br/>的概念</h2></div></section><section class="slide"><div><h2 class="dj_green_text">Django Apps</h2><backquote class="quote">> Django Project 是由一個個的 Django APP 所組成，
+對於剛學習 Django 的人來說，可能會不知道所謂的 Django APP 是什麼。
+其實一個 Django APP 很簡單，一般來說我們會希望一個 Django APP 能夠 "
+do one thing and do it well." 也就是說盡可能的讓功能單純，
+這樣子日後更能夠有 reuse 的機會。- Andy Dai</backquote></div></section><section class="slide console"><div><pre class="code smaller">
+<div class="codehilite"><span class="o">(</span>taipy<span class="o">)</span>% python manage.py startapp excuse<br/><span class="o">(</span>taipy<span class="o">)</span>% tree mysite/<br/>&nbsp;&nbsp;&nbsp;&nbsp;mysite/<br/>&nbsp;&nbsp;&nbsp;&nbsp;- excuse/<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- admin.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- models.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- tests.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- views.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- manage.py<br/>&nbsp;&nbsp;&nbsp;&nbsp;- mysite/...<br/>&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;3 directory, 13 files<br/></div></pre></div></section><section class="slide shout"><div><h2 class="fk_text">Flask Apps?</h2></div></section><section class="slide shout"><div><h2 class="fk_text">Flask Blueprint!</h2></div></section><section class="slide"><div><h2 class="fk_text">Flask Blueprint</h2><div class="note"><a href="http://flask.pocoo.org/docs/blueprints/">Modular Applications</a></div><pre class="code smaller">
+<div class="codehilite"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">current_app</span><span class="p">,</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">render_template</span><br/><span class="n">admin</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s">&#39;admin&#39;</span><span class="p">,</span> <span class="n">__name__</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s">&#39;/admin&#39;</span><span class="p">)</span><br/><br/><span class="nd">@admin.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span><br/><span class="k">def</span> <span class="nf">index</span><span class="p">():</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s">&#39;INDEX_TEMPLATE&#39;</span><span class="p">])</span><br/></div></pre><a href="http://flask.pocoo.org/docs/patterns/appfactories/" class="ref">Application Factory</a></div></section><section class="slide shout"><div><h2 class="small fk_text">Flask Blueprint<br/>真正的好處（之一）</h2></div></section><section class="slide shout"><div><h2 class="fk_text">就是初學者<br/>不用管這個</h2></div></section><section class="slide"><div><h2 class="fk_text">Flask App(s)</h2><p>如剛剛的範例，是個從無到有的過程。Flask 沒有限定專案裡的檔案要如何組織。對於剛學習 Flask 的人來說，不需要先知道 Application Factories (<by>Flask Blurprint) 的概念，就能完成一個應用。等日後到達一定的規模時，</by>再來重構（Refactor）也不遲。</p></div></section><section class="slide"><div><h2 class="fk_text">Flask App(s)</h2><p>當然，對沒有經驗的初學者，可能會造成不知如何組織一個 Flask 專案的檔案架構的問題，而那依然可由文件與範例來解。</p></div></section><section class="slide"><div><h2 class="dj_green_text">Django Settings <code>mysite/settings.py</code></h2><pre class="code even-smaller">
+<div class="codehilite"><span class="c"># SECURITY WARNING: don&#39;t run with debug turned on in production!</span><br/><span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span><br/><br/><span class="o">...</span><br/><br/><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.admin&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.auth&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.sessions&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.messages&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&#39;excuse&#39;</span>&nbsp; <span class="c"># &lt;- Newly added Django App</span><br/><span class="p">)</span><br/></div></pre></div></section><section class="slide"><div><h2>網址：Routing and Views</h2><span class="dj_green_text">Django urls</span> v.s. <span class="fk_text">Flask app.url</span><ul><li>不變的真理（適用大多數 Web Frameworks）<br/><span class="note">Request -> Routing -> (Render) -> Response</span></li><li>常見的情況<br/><backquote class="note">Request 進來 -> 撈資料 -> 處理資料 -> 網頁呈現</backquote></li></ul></div></section><section class="slide shout"><div><h2 class="dj_green_text">Django<br/>views & urls</h2></div></section><section class="slide"><div><code>mysite/urls.py</code>
+<pre class="code"><div class="codehilite"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="o">...</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">url</span><span class="p">(</span><span class="s">r&#39;^$&#39;</span><span class="p">,</span> <span class="s">&#39;excuse.views.home&#39;</span><span class="p">),</span><br/><span class="p">)</span><br/></div></pre></div></section><section class="slide"><div><h2 class="dj_green_text">Django urls</h2><ul class="dj_green_text"><li>使用 Regular Expression（正規表示式、regex）</li><li>語法不是很美觀</li><li>還要多學一點 regex 的觀念</li><li>不過對 regex 高手就可能是加分</li></ul></div></section><section class="slide"><div><code>mysite/excuse/views.py</code>
+<pre class="code smaller"><div class="codehilite"><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span><br/><br/><span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">excuses</span> <span class="o">=</span> <span class="p">[</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&quot;It was working in my head&quot;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&quot;I thought I fixed that&quot;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&quot;Actually, that is a feature&quot;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">&quot;It works on my machine&quot;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">]</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">excuses</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><br/></div></pre></div></section><section class="slide"><div><h2 class="dj_green_text">Django views</h2><ul class="dj_green_text"><li>常見的 function view</li><li>View 只接一個參數 <code>request</code></li><li>回傳的是一個 HttpResponse 物件</li></ul></div></section><section class="slide"><div><h2 class="dj_green_text">Django Class Base View</h2>Django 也在 1.3 版開始支援 Class Base View<ul class="dj_green_text"><li>但不是那麼簡單直覺</li><li>相反的，看來像是高度工程的結晶</li><li class="next">有沒有聽起來不是很容易使用？</li></ul></div></section><section class="slide shout"><div><h2 class="fk_text">Flask<br/>views & urls</h2></div></section><section class="slide"><div><h2 class="fk_text">Flask views & urls</h2>
+<pre class="code smaller"><div class="codehilite"><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/user/&lt;username&gt;&#39;</span><span class="p">)</span><br/><span class="k">def</span> <span class="nf">show_user_profile</span><span class="p">(</span><span class="n">username</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c"># show the user profile for that user</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="s">&#39;User </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">username</span><br/><br/><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/post/&lt;int:post_id&gt;&#39;</span><span class="p">)</span><br/><span class="k">def</span> <span class="nf">show_post</span><span class="p">(</span><span class="n">post_id</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c"># show the post with the given (int) id</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="s">&#39;Post </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">post_id</span><br/>&nbsp;<br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">Flask View</h2><ul class="fk_text"><li>View 也是一個簡單的 function</li><li>上面綁著 URL route <code>'/post/&lt;int:post_id&gt;'</code></li><li>View 接要的有型參數 <code>post_id</code><span class="note">（int 整數）</span></li><li>這邊直接回傳了一個字串</li></ul></div></section><section class="slide"><div><h2 class="fk_text">Flask Urls</h2><ul class="fk_text"><li>那樣下去看來 URLs 會跟著 views 散布四處</li><li>所以在架構上清楚的切模組相當重要</li></ul></div></section><section class="slide"><div><h2 class="fk_text">Flask Pluggable Views</h2><backquote class="quote">> inspired by the generic views from Django :(</backquote>
+<pre class="code even-smaller"><div class="codehilite"><span class="kn">from</span> <span class="nn">flask.views</span> <span class="kn">import</span> <span class="n">View</span><br/><br/><span class="k">class</span> <span class="nc">ShowUsers</span><span class="p">(</span><span class="n">View</span><span class="p">):</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">def</span> <span class="nf">dispatch_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">users</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;users.html&#39;</span><span class="p">,</span> <span class="n">objects</span><span class="o">=</span><span class="n">users</span><span class="p">)</span><br/><br/><span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s">&#39;/users/&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">view_func</span><span class="o">=</span><span class="n">ShowUsers</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="s">&#39;show_users&#39;</span><span class="p">))</span><br/>&nbsp;<br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">網頁樣版</h2>Django template v.s. Jinja2</div></section><section class="slide"><div><h2 class="dj_green_text">Django template</h2><code>mysite/excuse/templates/index.html</code>
+<pre class="code smaller"><div class="codehilite"><span class="cp">&lt;!DOCTYPE HTML&gt;</span><br/><span class="nt">&lt;html&gt;</span><br/><span class="nt">&lt;head&gt;</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;title&gt;</span>Clone of Excuses For Lazy Coders<span class="nt">&lt;/title&gt;</span><br/><span class="nt">&lt;/head&gt;</span><br/><span class="nt">&lt;body&gt;</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h1&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span> <span class="na">rel=</span><span class="s">&quot;nofollow&quot;</span><span class="nt">&gt;</span>{{ excuse }}<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/h1&gt;</span><br/><span class="nt">&lt;/body&gt;</span><br/><span class="nt">&lt;/html&gt;</span><br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">Flask template</h2><code>myleaf/templates/index.html</code>
+<pre class="code smaller"><div class="codehilite"><span class="cp">&lt;!doctype html&gt;</span><br/><span class="nt">&lt;title&gt;</span>Hello from Flask<span class="nt">&lt;/title&gt;</span><br/>{% if name %}<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h1&gt;</span>Hello {{ name }}!<span class="nt">&lt;/h1&gt;</span><br/>{% else %}<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span><br/>{% endif %}<br/>&nbsp;<br/></div></pre></div></section><section class="slide shout"><div><h2>乍看之下<br/>差不多？</h2></div></section><section class="slide"><div><h2>表單與驗證</h2>Django Form v.s. Flask-WTF (WTForms)</div></section><section class="slide"><div><h2 class="dj_green_text">Django Form</h2><code>mysite/excuse/templates/index.html</code>
+<pre class="code smaller"><div class="codehilite"><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span><br/><span class="k">class</span> <span class="nc">NameForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">your_name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">label</span><span class="o">=</span><span class="s">&#39;Your name&#39;</span><span class="p">,</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><br/></div></pre></div></section><section class="slide"><div><h2 class="fk_text">Flask template</h2><code>myleaf/templates/index.html</code>
+<pre class="code smaller"><div class="codehilite"><span class="kn">from</span> <span class="nn">flask_wtf</span> <span class="kn">import</span> <span class="n">Form</span><br/><span class="kn">from</span> <span class="nn">wtforms</span> <span class="kn">import</span> <span class="n">TextField</span><br/><span class="kn">from</span> <span class="nn">wtforms.validators</span> <span class="kn">import</span> <span class="n">DataRequired</span><br/><br/><span class="k">class</span> <span class="nc">MyForm</span><span class="p">(</span><span class="n">Form</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">name</span> <span class="o">=</span> <span class="n">TextField</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span><br/>&nbsp;<br/></div></pre></div></section><section class="slide"><div><h2>資料庫物件</h2>Django ORM v.s. Flask-SQLAlchemy</div></section><section class="slide"><div><h2 class="dj_green_text">Django models</h2><code>mysite/excuse/models.py</code>
+<pre class="code"><div class="codehilite"><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span><br/><br/><span class="k">class</span> <span class="nc">Excuse</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span><br/></div></pre></div></section><section class="slide console"><div>
+<pre class="code smaller"><div class="codehilite"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">excuse.models</span> <span class="kn">import</span> <span class="n">Excuse</span><br/><span class="o">&gt;&gt;&gt;</span> <span class="n">Excuse</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">content</span><span class="o">=</span><span class="s">&quot;It was working in my head&quot;</span><span class="p">)</span><br/><br/><span class="o">&gt;&gt;&gt;</span> <span class="n">Excuse</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><br/><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">excuse</span> <span class="ow">in</span> <span class="n">Excuse</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">():</span><br/><span class="o">&gt;&gt;&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="k">print</span> <span class="n">excuse</span><span class="o">.</span><span class="n">content</span><br/>&nbsp;<br/></div></pre></div></section><section class="slide"><div><h2>使用者登入</h2>Django User v.s. Flask-Login</div></section><section class="slide"><div><h2>Django User <code>django.contrib.auth</code></h2><ul><li>User and Group</li><li>Authentication</li><li>Authorization<br/><span class="note">Permissions</span></li></ul></div></section><section class="slide"><div><h2>Flask-Login</h2><p><a href="https://flask-login.readthedocs.org/">官方文件</a></p><p>可以想像成把 Django auth 模組拆成 Flask auth 來用。</p></div></section><section class="slide"><div><h2>第三方套件與在台灣的學習資源</h2><ul><li><a href="http://djangogirlstaipei.herokuapp.com/tutorials/">Django Tutorial on Django Girls Taipei</a></li><li><a href="https://www.gitbook.io/book/daikeren/django_tutorial">Django Tutorial by Andy Dai</a></li><li><a href="http://www.codedata.com.tw/python/python-tutorial-the-4th-class-1-django-getting-started/">Python Tutorial 第四堂（1）Django 起步走 by caterpillar | CodeData</a></li></ul></div></section><section class="slide"><div><h2>來 Python 社群玩</h2><ul><li><a href="http://wiki.python.org.tw/">精彩好玩的在地／他地社群聚會</a></li><li>Python Taiwan Google Group</li><li>Facebook Python Taiwan Group</li><li>搜尋「學 Python」</li><li>去 PyCon Taiwan (APAC) 找個事做</li></ul></div></section><section class="slide console shout"><div><h2 class="small"><code>Thanks!</code><br/><code>Questions & Answers</code></h2></div></section><div class="progress"><div></div></div><!-- Copyright © 2014 Keith Yang -->
+<script src="buildpack//shower-core/shower.min.js">
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-4248558-11', 'keitheis.github.io');
+ga('send', 'pageview');</script>
+</body></html>
