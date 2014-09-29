@@ -1,0 +1,863 @@
+-namespace module="plimsolls.formatters.code2html" name="code2html"
+
+-py
+  subject = u"Django Tutorial v.s. Flask Tutorial"
+  livereload = False
+  buildpath = 'buildpack/'
+
+
+doctype 5
+html lang="zh-hants"
+  head
+    title ${subject} -- Keith Yang
+    meta charset="utf-8"
+    meta name="viewport" content="width=792, user-scalable=no"
+    meta http-equiv="x-ua-compatible" content="ie=edge"
+    link rel="stylesheet" href="${buildpath}/shower-ribbon/styles/screen.css"
+    link rel="stylesheet" href="${buildpath}/font-awesome/css/font-awesome.min.css"
+    / link rel="stylesheet" media="all" href="${buildpath}/Han/han.css"
+    link rel="stylesheet" href="pygments.css"
+    script src="${buildpath}/jquery/dist/jquery.min.js"
+
+    -stylus
+      k_yellow = rgb(255, 231, 97)
+      dj_brown = rgb(171, 86, 3)
+      dj_green_dark = #082d20
+      dj_green_text = rgb(72, 120, 88)
+      dj_green_text_light = rgb(92, 180, 108)
+      fk_text = #1f1f1f
+      k_red = #86382C
+      taipeipy_red = #c23236
+      k_white = #FFFFFF
+      k_blue = #2082fb
+      .slide
+        .dj_green_text
+          color dj_green_text
+        .fk_text
+          color fk_text
+        .white
+          color white
+        .quote
+          color #666
+        font-family "Trebuchet MS", "Source Han Sans TWHK", "Noto Sans T Chinese", sans-serif
+        pre
+          margin 0 20px
+        ul, ol
+          li
+            margin-left 64px
+            i.fa
+              text-indent 0
+        a
+          background none
+          color dj_brown
+          &.hover
+            background linear-gradient(to top, currentcolor, $k_yellow 0.09em, transparent 0.09em, transparent) repeat-x scroll 0% 0% transparent
+          &.ref
+            font-size: 16px
+            border-bottom: 1px solid #FBDC59;
+        &.console
+          background-color black
+        &.cover
+          background-color #fff
+        &.description
+          ul, ol
+            li
+              font-size 22px
+
+          ul.smaller, ol.smaller
+            li
+              font-size 18px
+        &:after
+          padding 38px 0px 0px
+          color k_red
+          width 54px
+          background url('pictures/kribbon.svg') no-repeat scroll 0% 0% transparent
+
+
+        .text-left
+          text-align left
+        .text-center
+          text-align center
+        .text-right
+          text-align right
+
+        background-color k_white
+        color k_red
+        font-size 32px
+        h2 
+          a img 
+            text-decoration none
+          
+          color k_red
+          &.footnote 
+            font-size 30px
+        
+        hr 
+          color k_yellow
+          border 4px solid k_yellow
+        
+        i  font-style normal 
+        pre 
+          font-family monospace
+          line-height 40px
+        
+        .terminal 
+          padding 5px
+          font-family monospace
+          border-radius 5px
+          background none repeat scroll 0% 0% rgb(39, 40, 34)
+          color rgb(248, 248, 242)
+        
+        pre.code
+          padding 5px
+          border-radius 3px
+        code, .code 
+          font-family "Ubuntu Mono", monospace
+          color k_yellow
+          background black
+          &.dj_green_text
+            color dj_green_text_light
+          &.smaller
+            font-size 26px
+            line-height 30px
+          &.even-smaller
+            font-size 22px
+            line-height 24px
+        
+        .note 
+          color #6763fb
+        
+        &.shout 
+          h2.small
+            font-size 100px
+          h2.text-left
+            text-align left
+
+          h3 
+            font-size 44px
+          
+          ul.green li
+            color k_yellow 
+          ul li 
+            float left
+          
+          strong 
+            text-shadow 4px 4px black
+
+      .full .progress div 
+        border-color transparent transparent k_yellow
+      
+      .slide ol libefore, .slide ul li:before 
+        color k_yellow
+
+      .slide.dj
+        background-color 
+        color dj_green_text
+        h2, h3
+          color dj_green_text
+        .note
+          color #fd6866
+        a
+          color dj_brown
+
+      .slide.fk
+        color fk_text
+        h2, h3
+          color fk_text
+        .note
+          color #fd6866
+        a
+          color dj_brown
+
+
+  body.list
+
+    header.caption
+      h1 = subject
+      p.en_font
+        Keith Yang
+
+    section#Cover.slide.cover: div
+        h2 `span.dj_green_text Django` Tutorial
+          br v.s. `span.fk_text Flask` Tutorial
+        hr
+        h3.text-center
+          author
+            a.en_font href="https://yang.keitheis.org" Keith Yang
+
+        .taichungpy
+          a href="http://www.meetup.com/Taichung-Python-Meetup/"
+            Taichung.py
+          br
+          span.text 2014.7
+
+      -stylus
+        .slide
+          .taichungpy
+            float right
+            margin-top 2em
+            margin-right -2em
+            img
+              position relative
+              width 200px
+            .text
+              float right
+              color #2082fb
+              font-family monospace
+              font-size 0.8em
+        k_red = #c23236
+        k_yellow = #FBDC59
+        #Cover
+          h2
+            color k_red
+            margin 40px 0
+            text-align center
+            line-height 1.2em
+            font-size 70px
+          .author
+            text-align center
+            color k_red
+            margin 10px 0 0
+        // .slide ul.py-list li
+        //  font-size  0.6em
+        .slide .markpy
+          color #7fd7c9
+
+    section.slide.cover: div
+        img src="pictures/mecollage.png" width="100%" alt="Photos of me"
+
+    section.slide: div
+      h2
+        a.ref href='https://yang.keitheis.org' `code yang.keitheis.org`
+      h3
+        img.pull-right alt="biideal, Taipei.py, PyCon APAC" src="pictures/Working.jpg" width="80%"
+      br
+      | @keitheis
+      ,
+      strong
+        a title="keitheis on Twitter" href="https://twitter.com/keitheis": i.fa.fa-twitter
+        ,
+        a title="ketheis on Bitbucket" href="https://bitbucket.org/keitheis": i.fa.fa-bitbucket
+        ,
+        a title="keitheis on Github" href="https://github.com/keitheis": i.fa.fa-github
+
+    section.slide.description: div
+      h2 大綱
+      ol
+        li 介紹 Python web frameworks
+        li pip 安裝套件與 virtualenv 設定
+        li Project 的結構
+        li 網址：Routing and Views: Django urls v.s. Flask app.url
+        li 網頁樣版：Django template v.s. Jinja2
+        li 表單與驗證：Django Form v.s. Flask-WTF (WTForms)
+        li 資料庫物件：Django ORM v.s. Flask-SQLAlchemy
+        li 使用者登入：Django User v.s. Flask-Login
+        li 第三方套件與在台灣的學習資源
+
+    section.slide.dj.shout: div
+      h2.small 這個字色
+        br 是屬於 Django 的
+
+    section.slide.fk.shout: div
+      h2.small 這個字色
+        br 是屬於 Flask 的
+
+    section.slide: div
+      h2 介紹 Python web frameworks 
+      ul.pull-right
+        li Falcon
+        li web.py
+        li CherryPy
+        li circuits
+        li wheezy.web
+        li web.py
+      ul.pull-right
+        li.dj_green_text Django
+        li.fk_text Flask
+        li Pyramid
+        li Tornado
+        li Bottle
+        li Web2py
+      p
+        隨隨便便就一打
+      p
+        每個人都可以寫
+        br ／用自己喜歡的框架
+
+    section.slide: div
+      h2 如何挑選
+      ul
+        li 目的＆功能
+          br
+          span.note 難以達成目標，再強大也有限
+        li 程度＆支援資源（文件數、中文文件數、社群）
+          br
+          span.note 都可以自己刻，只要有心有力與那個時間
+        li 品味＆社群文化
+          br
+          span.note 理解架構之美與效能之威；設計理念形成社群
+
+    section.slide: div
+      h2 如何挑選（續）
+      ul
+        li 目的＆功能
+          br
+          span.note 都能達成目標，再微小也有限
+        li 程度＆支援資源（文件數、中文文件數、社群）
+          br
+          span.note 都可以找套件，只要能用、有人寫、有人維護
+        li 品味＆社群文化
+          br
+          span.note 忘記架構之限與效能之用；市場會改變社群
+
+    section.slide: div
+      h2 pip 安裝套件與 virtualenv 設定
+      安裝 pip
+      ul
+        li Python 3.4 on Windows: pip included
+        li Download `a href="https://bootstrap.pypa.io/get-pip.py" get-pip.py`
+        li
+          code python get-pip.py
+
+    section.slide: div
+      h2 用 pip 安裝 virtualenv
+      ul
+        li
+          code pip install virtualenv
+        li
+          code virtualenv taipy
+          建立 taipy 的 virtualenv 環境
+        li
+          在 Mac 或 Linux 上進入 virtualenv 環境
+          br
+          code . taipy/bin/activate
+        li
+          在 Windows 上進入 virtualenv 環境
+          br
+          code taipy\scripts\activate
+
+    section.slide.description.console: div
+      h2
+        code pip install
+      code Django Flask Flask-WTF Flask-SQLAlchemy
+      ul.smaller
+        li.white Django-1.6.5`span.note -py2.py3-none-any.whl` (6.7MB)
+        li.white Flask-0.10.1.tar.gz (544kB)
+        li.white Flask-WTF-0.10.0.tar.gz (246kB)
+        li.white Flask-SQLAlchemy-1.0.tar.gz (92kB)
+        li.white Werkzeug-0.9.6.tar.gz (1.1MB)
+        li.white Jinja2-2.7.3.tar.gz (378kB)
+        li.white itsdangerous-0.24.tar.gz (46kB)
+        li.white WTForms-2.0.1.zip (444kB)
+        li.white SQLAlchemy-0.9.7.tar.gz (4.1MB)
+        li.white MarkupSafe-0.23.tar.gz
+
+    section.slide.shout: div
+      h2 Project 的結構
+
+    section.slide.console: div
+      -py
+        code = """
+        Django 1.6.5
+        (taipy)% django-admin.py startproject mysite
+        (taipy)% tree mysite/
+          mysite/
+          - manage.py
+          - mysite/
+            - __init__.py
+            - settings.py
+            - urls.py
+            - wsgi.py
+
+          1 directory, 5 files"""
+      pre.code.smaller
+        == code2html.reformat('sh', code)
+
+    section.slide.console: div
+      pre.code.smaller
+        -py
+          code = """
+          Flask 0.10.1
+          (taipy)% mkdir myleaf
+          (taipy)% cat > myleaf/leaf.py
+          """
+        == code2html.reformat('sh', code)
+        br
+        -py
+          code = """
+            from flask import Flask
+            app = Flask(__name__)
+
+            @app.route("/")
+            def hello():
+              return "Hello Leaf!"
+
+            if __name__ == "__main__":
+              app.run()"""
+        == code2html.reformat('python', code)
+
+    section.slide.console: div
+      h2 執行 Run server
+      pre.code.smaller
+        -py
+          code = """
+          Flask
+          (taipy)% cd myleaf
+          (taipy)% python leaf.py
+            * Running on http://127.0.0.1:5000/
+
+          Django
+          (taipy)% cd ../mysite
+          (taipy)% python manage.py runserver
+            ...
+            Starting development server at http://127.0.0.1:8000/
+            Quit the server with CONTROL-C.
+          """
+
+        == code2html.reformat('sh', code)
+
+    section.slide: div
+      h2.fk_text 小型 Flask 應用架構
+      pre.code.even-smaller
+        -py
+          code = """
+          - myleaf/
+            - templates/
+            - static/
+            - main/
+              - __init__.py
+              - errors.py
+              - forms.py
+              - views.py
+            - __init__.py
+            - tests/
+              - __init__.py
+              - test*.py
+            - email.py
+            - models.py
+            - requirements.txt
+            - config.py
+          """
+        == code2html.reformat('sh', code)
+
+    section.slide: div
+      h2.fk_text 中大型 Flask 應用架構
+      pre.code.even-smaller
+        -py
+          code = """
+            - myleaf/
+              - app/
+                - templates/
+                - static/
+                - main/...
+                - __init__.py
+                - email.py
+                - models.py
+              - migrations/...
+              - tests/...
+              - venv/...
+              - manage.py
+              - requirements.txt
+              - config.py"""
+        == code2html.reformat('sh', code)
+
+    section.slide.shout: div
+      h2 模組化
+        br 的概念
+
+    section.slide: div
+      h2.dj_green_text Django Apps
+      backquote.quote
+        | > Django Project 是由一個個的 Django APP 所組成，
+          對於剛學習 Django 的人來說，可能會不知道所謂的 Django APP 是什麼。
+          其實一個 Django APP 很簡單，一般來說我們會希望一個 Django APP 能夠 "
+          do one thing and do it well." 也就是說盡可能的讓功能單純，
+          這樣子日後更能夠有 reuse 的機會。- Andy Dai
+
+    section.slide.console: div
+      pre.code.smaller
+        -py
+          code = """
+          (taipy)% python manage.py startapp excuse
+          (taipy)% tree mysite/
+            mysite/
+            - excuse/
+              - __init__.py
+              - admin.py
+              - models.py
+              - tests.py
+              - views.py
+            - manage.py
+            - mysite/...
+
+            3 directory, 13 files"""
+        == code2html.reformat('sh', code)
+
+    section.slide.shout: div
+      h2.fk_text Flask Apps?
+
+    section.slide.shout: div
+      h2.fk_text Flask Blueprint!
+
+    section.slide: div
+      h2.fk_text Flask Blueprint
+      .note 
+        a href="http://flask.pocoo.org/docs/blueprints/"
+          Modular Applications
+      pre.code.smaller
+        -py
+          code = """
+            from flask import current_app, Blueprint, render_template
+            admin = Blueprint('admin', __name__, url_prefix='/admin')
+
+            @admin.route('/')
+            def index():
+                return render_template(current_app.config['INDEX_TEMPLATE'])"""
+        == code2html.reformat('python', code)
+      a.ref href='http://flask.pocoo.org/docs/patterns/appfactories/'
+        Application Factory
+
+    section.slide.shout: div
+      h2.small.fk_text Flask Blueprint
+        br 真正的好處（之一）
+
+    section.slide.shout: div
+      h2.fk_text 就是初學者
+        br 不用管這個
+
+    section.slide: div
+      h2.fk_text Flask App(s)
+      p
+        如剛剛的範例，是個從無到有的過程。
+        Flask 沒有限定專案裡的檔案要如何組織。
+        對於剛學習 Flask 的人來說，不需要先知道 Application Factories (
+        by Flask Blurprint) 的概念，就能完成一個應用。等日後到達一定的規模時，
+        再來重構（Refactor）也不遲。
+
+    section.slide: div
+      h2.fk_text Flask App(s)
+      p
+        當然，對沒有經驗的初學者，可能會造成不知如
+        何組織一個 Flask 專案的檔案架構的問題，而那依然可由文件與範例來解。
+
+    section.slide: div
+      h2.dj_green_text Django Settings `code mysite/settings.py`
+      pre.code.even-smaller
+        -py
+          code = """
+            # SECURITY WARNING: don't run with debug turned on in production!
+            DEBUG = True
+            
+            ...
+
+            INSTALLED_APPS = (
+                'django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',
+                'excuse'  # <- Newly added Django App
+            )"""
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2 網址：Routing and Views
+      | `span.dj_green_text Django urls` v.s. `span.fk_text Flask app.url`
+      ul
+        li 不變的真理（適用大多數 Web Frameworks）
+          br
+            span.note Request -> Routing -> (Render) -> Response
+        li 常見的情況
+          br
+            backquote.note Request 進來 -> 撈資料 -> 處理資料 -> 網頁呈現
+
+    section.slide.shout: div
+      h2.dj_green_text Django
+        br views & urls
+
+    section.slide: div
+      code mysite/urls.py
+      -py
+        code = """
+          urlpatterns = patterns('',
+            ...
+            url(r'^$', 'excuse.views.home'),
+          )"""
+      pre.code
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2.dj_green_text Django urls
+      ul.dj_green_text
+        li 使用 Regular Expression
+          （正規表示式、regex）
+        li 語法不是很美觀
+        li 還要多學一點 regex 的觀念
+        li 不過對 regex 高手就可能是加分
+        
+    section.slide: div
+      code mysite/excuse/views.py
+      -py
+        code = """
+          from django.http import HttpResponse
+
+          def home(request):
+              excuses = [
+                  "It was working in my head",
+                  "I thought I fixed that",
+                  "Actually, that is a feature",
+                  "It works on my machine",
+              ]
+              return HttpResponse(excuses[0])"""
+      pre.code.smaller
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2.dj_green_text Django views
+      ul.dj_green_text
+        li 常見的 function view
+        li View 只接一個參數 `code request`
+        li 回傳的是一個 HttpResponse 物件
+
+    section.slide: div
+      h2.dj_green_text Django Class Base View
+      Django 也在 1.3 版開始支援 Class Base View
+      ul.dj_green_text
+        li 但不是那麼簡單直覺
+        li 相反的，看來像是高度工程的結晶
+        li.next 有沒有聽起來不是很容易使用？
+        
+    section.slide.shout: div
+      h2.fk_text Flask
+        br views & urls
+
+    section.slide: div
+      h2.fk_text Flask views & urls
+      -py
+        code = """
+          @app.route('/user/<username>')
+          def show_user_profile(username):
+              # show the user profile for that user
+              return 'User %s' % username
+
+          @app.route('/post/<int:post_id>')
+          def show_post(post_id):
+              # show the post with the given (int) id
+              return 'Post %d' % post_id
+          """
+      pre.code.smaller
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2.fk_text Flask View
+      ul.fk_text
+        li View 也是一個簡單的 function
+        li 上面綁著 URL route `code '/post/&lt;int:post_id&gt;'`
+        li View 接要的有型參數 `code post_id`_`span.note （int 整數）`
+        li 這邊直接回傳了一個字串
+
+    section.slide: div
+      h2.fk_text Flask Urls
+      ul.fk_text
+        li 那樣下去看來 URLs 會跟著 views 散布四處
+        li 所以在架構上清楚的切模組相當重要
+        
+    section.slide: div
+      h2.fk_text Flask Pluggable Views
+      backquote.quote
+        | > inspired by the generic views from Django :(
+      -py
+        code = """
+          from flask.views import View
+
+          class ShowUsers(View):
+
+              def dispatch_request(self):
+                  users = User.query.all()
+                  return render_template('users.html', objects=users)
+
+          app.add_url_rule('/users/',
+                           view_func=ShowUsers.as_view('show_users'))
+          """
+      pre.code.even-smaller
+        == code2html.reformat('python', code)
+
+        
+    section.slide: div
+      h2.fk_text 網頁樣版
+      Django template v.s. Jinja2
+
+    section.slide: div
+      h2.dj_green_text Django template
+      code mysite/excuse/templates/index.html
+      -py
+        code = """
+          <!DOCTYPE HTML>
+          <html>
+          <head>
+            <title>Clone of Excuses For Lazy Coders</title>
+          </head>
+          <body>
+            <h1> <a href="/" rel="nofollow">{{ excuse }}</a> </h1>
+          </body>
+          </html>"""
+      pre.code.smaller
+        == code2html.reformat('html', code)
+
+    section.slide: div
+      h2.fk_text Flask template
+      code myleaf/templates/index.html
+      -py
+        code = """
+          <!doctype html>
+          <title>Hello from Flask</title>
+          {% if name %}
+            <h1>Hello {{ name }}!</h1>
+          {% else %}
+            <h1>Hello World!</h1>
+          {% endif %}
+          """
+      pre.code.smaller
+        == code2html.reformat('html', code)
+
+    section.slide.shout: div
+      h2 乍看之下
+        br 差不多？
+
+    section.slide: div
+      h2 表單與驗證
+      Django Form v.s. Flask-WTF (WTForms)
+
+    section.slide: div
+      h2.dj_green_text Django Form
+      code mysite/excuse/templates/index.html
+      -py
+        code = """
+        from django import forms
+        class NameForm(forms.Form):
+          your_name = forms.CharField(
+            label='Your name',
+            max_length=100)
+        """
+      pre.code.smaller
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2.fk_text Flask template
+      code myleaf/templates/index.html
+      -py
+        code = """
+          from flask_wtf import Form
+          from wtforms import TextField
+          from wtforms.validators import DataRequired
+
+          class MyForm(Form):
+              name = TextField('name', validators=[DataRequired()])
+          """
+      pre.code.smaller
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2 資料庫物件
+      Django ORM v.s. Flask-SQLAlchemy
+
+    section.slide: div
+      h2.dj_green_text Django models
+      code mysite/excuse/models.py
+      -py
+        code = """
+          from django.db import models
+
+          class Excuse(models.Model):
+            content = models.TextField()
+
+            def __unicode__(self):
+                return self.content"""
+      pre.code
+        == code2html.reformat('python', code)
+
+    section.slide.console: div
+      -py
+        code = """
+          >>> from excuse.models import Excuse
+          >>> Excuse.objects.create(
+              content="It was working in my head")
+
+          >>> Excuse.objects.all()
+          >>> for excuse in Excuse.objects.all():
+          >>>     print excuse.content
+          """
+      pre.code.smaller
+        == code2html.reformat('python', code)
+
+    section.slide: div
+      h2 使用者登入
+      Django User v.s. Flask-Login
+
+    section.slide: div
+      h2 Django User `code django.contrib.auth`
+      ul
+        li User and Group
+        li Authentication
+        li Authorization
+          br
+            span.note Permissions
+
+    section.slide: div
+      h2 Flask-Login
+      p
+        a href="https://flask-login.readthedocs.org/"
+          官方文件
+      p
+        可以想像成把 Django auth 模組拆成 Flask auth 來用。
+
+    section.slide: div
+      h2 第三方套件與在台灣的學習資源
+      ul
+        li 
+          a href="http://djangogirlstaipei.herokuapp.com/tutorials/"
+            Django Tutorial on Django Girls Taipei
+        li 
+          a href="https://www.gitbook.io/book/daikeren/django_tutorial"
+            Django Tutorial by Andy Dai
+        li 
+          a href="http://www.codedata.com.tw/python/python-tutorial-the-4th-class-1-django-getting-started/"
+            Python Tutorial 第四堂（1）Django 起步走 by caterpillar | CodeData
+            
+
+    section.slide: div
+      h2 來 Python 社群玩
+      ul
+        li
+          a href="http://wiki.python.org.tw/"
+            精彩好玩的在地／他地社群聚會
+        li Python Taiwan Google Group
+        li Facebook Python Taiwan Group
+        li 搜尋「學 Python」
+        li 去 PyCon Taiwan (APAC) 找個事做
+
+    section.slide.console.shout: div
+      h2.small
+        code
+          Thanks!
+        br
+        code
+          Questions & Answers
+
+    .progress: div
+
+    <!-- Copyright © 2014 Keith Yang -->
+    script src="${buildpath}/shower-core/shower.min.js"
+    / script src="${buildpath}/Han/js/han.js"
+    -if livereload
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    -else
+      script
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-4248558-11', 'keitheis.github.io');
+        ga('send', 'pageview');
