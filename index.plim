@@ -9,7 +9,7 @@
 doctype 5
 html lang="zh-hants"
   head
-    title ${subject} -- Keith Yang
+    title ${subject} in Taichung.py -- Keith Yang
     meta charset="utf-8"
     meta name="viewport" content="width=792, user-scalable=no"
     meta http-equiv="x-ua-compatible" content="ie=edge"
@@ -171,6 +171,10 @@ html lang="zh-hants"
 
 
   body.list
+
+    p.badge
+      a href="http://www.meetup.com/Taichung-Python-Meetup/" target="_blank"
+        台中.py
 
     header.caption
       h1 = subject
